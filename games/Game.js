@@ -15,5 +15,4 @@ const Game = connection.define('games', {
         allowNull: true
     }
 });
-
 module.exports = Game;

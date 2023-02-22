@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('./User');
 const jwt = require('jsonwebtoken');
-const auth = require("../middleware/userAuth");
+const auth = require("../middlewares/userAuth");
 
 
 
@@ -19,6 +19,7 @@ router.get('/users', (req, res) => {
 // Create user
 router.post('/user', (req, res) => {
     let {name, email, password} = req.body;
+    console.log(name)
     if(name != undefined || email != undefined || password != undefined){
         User.create({
             name:name,
